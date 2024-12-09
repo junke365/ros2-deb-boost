@@ -67,18 +67,18 @@ jump_fcontext:
     addi  sp, sp, -0xd0
 
     # save fs0 - fs11
-    fsd  fs0, 0x00(sp)
-    fsd  fs1, 0x08(sp)
-    fsd  fs2, 0x10(sp)
-    fsd  fs3, 0x18(sp)
-    fsd  fs4, 0x20(sp)
-    fsd  fs5, 0x28(sp)
-    fsd  fs6, 0x30(sp)
-    fsd  fs7, 0x38(sp)
-    fsd  fs8, 0x40(sp)
-    fsd  fs9, 0x48(sp)
-    fsd  fs10, 0x50(sp)
-    fsd  fs11, 0x58(sp)
+    fsw  fs0, 0x00(sp)
+    fsw  fs1, 0x08(sp)
+    fsw  fs2, 0x10(sp)
+    fsw  fs3, 0x18(sp)
+    fsw  fs4, 0x20(sp)
+    fsw  fs5, 0x28(sp)
+    fsw  fs6, 0x30(sp)
+    fsw  fs7, 0x38(sp)
+    fsw  fs8, 0x40(sp)
+    fsw  fs9, 0x48(sp)
+    fsw  fs10, 0x50(sp)
+    fsw  fs11, 0x58(sp)
 
     # save s0-s11, ra
     sd  s0, 0x60(sp)
@@ -105,18 +105,18 @@ jump_fcontext:
     mv  sp, a0
 
     # load fs0 - fs11
-    fld  fs0, 0x00(sp)
-    fld  fs1, 0x08(sp)
-    fld  fs2, 0x10(sp)
-    fld  fs3, 0x18(sp)
-    fld  fs4, 0x20(sp)
-    fld  fs5, 0x28(sp)
-    fld  fs6, 0x30(sp)
-    fld  fs7, 0x38(sp)
-    fld  fs8, 0x40(sp)
-    fld  fs9, 0x48(sp)
-    fld  fs10, 0x50(sp)
-    fld  fs11, 0x58(sp)
+    flw  fs0, 0x00(sp)
+    flw  fs1, 0x08(sp)
+    flw  fs2, 0x10(sp)
+    flw  fs3, 0x18(sp)
+    flw  fs4, 0x20(sp)
+    flw  fs5, 0x28(sp)
+    flw  fs6, 0x30(sp)
+    flw  fs7, 0x38(sp)
+    flw  fs8, 0x40(sp)
+    flw  fs9, 0x48(sp)
+    flw  fs10, 0x50(sp)
+    flw  fs11, 0x58(sp)
 
     # load s0-s11,ra
     ld  s0, 0x60(sp)
